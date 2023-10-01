@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        uses: github/checkout@v3
+        uses: actions/checkout@v3
       - name: Install Node
-        uses: github/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install Dependencies
@@ -19,9 +19,9 @@ jobs:
     needs: lint
     steps:
       - name: Get Code
-        uses: github/checkout@v3
+        uses: actions/checkout@v3
       - name: Install Node
-        uses: github/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install Dependencies
@@ -33,9 +33,9 @@ jobs:
     needs: test
     steps:
       - name: Get Code
-        uses: github/checkout@v3
+        uses: actions/checkout@v3
       - name: Install Node
-        uses: github/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install Dependencies
